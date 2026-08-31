@@ -1,0 +1,950 @@
+{
+  "generated": "2026-08-27",
+  "python_files": 145,
+  "syntax_failures": [],
+  "import_cycles": [],
+  "files": [
+    {
+      "file": "backend/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/main.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/services/frontend_adapter.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/services/report_service.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/anthropogenic_risk_engine_v2.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/consensus_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/geology_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/cluster_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/multiscale_engine_v2.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/landcover_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/target_center_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/zone_explainer.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/thermal_contrast_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/target_geometry_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/target_ranking.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/thermal_score_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/target_ranking_v2.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/road_geometry_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/target_explainer.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/temporal_stability_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/structural_anomaly_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/anthropogenic_risk_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/multiscale_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/fusion/evidence_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/seasonal_thermal_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/target_zone_ranking.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/final_score_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/fusion/intelligence_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/tests/test_scientific_contract.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/ml/isolation_forest.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/ml/lof_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/ml/pca_engine.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/auth/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/auth/store.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/auth/api.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/auth/security.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": [
+        "BROAD_EXCEPTION"
+      ]
+    },
+    {
+      "file": "backend/db/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/db/database.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/db/models.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/processing/aoi.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/processing/__init__.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/processing/grid.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/processing/geology.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/core/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/core/store.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/core/auth.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": [
+        "BROAD_EXCEPTION"
+      ]
+    },
+    {
+      "file": "backend/core/config.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/aster_features.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/ndvi.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/__init__.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/ndwi.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/clay_ratio.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/thermal_features.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/feature_matrix.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/test_slope.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/temporal_features_buffer.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/test_iron_oxide.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/ee_init.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/slope.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/temporal_features.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/thermal_annulus.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/grid_sampler.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/dem.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/test_clay_ratio.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/aster_sampler.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/sentinel_service.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/test_ndbi.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/test_dem.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/test_ndwi.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/iron_oxide.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/aster_thermal_features.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/gee_auth.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/auth.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/analysis.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/temporal_sampler.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/ndbi.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/thermal_neighborhood.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/gee/thermal_sampler.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/gee/sentinel2.py",
+      "status": "DATA_ENGINE",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/cache/temporal_cache.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/science/__init__.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/science/validation.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/science/features.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/science/multiscale.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/science/legacy_bridge.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/science/utm.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/models/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/models/report_model.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/models/schemas.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/models/targeting.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/registry/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/registry/analysis_registry.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/contracts/structural_result.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/contracts/target_zone.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/contracts/target_model.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/contracts/test_engine_result.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/contracts/test_target_model.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": [
+        "FIXED_SCORE_100"
+      ]
+    },
+    {
+      "file": "backend/contracts/engine_result.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/reporting/__init__.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/reporting/report.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/reporting/pdf.py",
+      "status": "SUPPORTING",
+      "syntax": "PASS",
+      "flags": [
+        "BROAD_EXCEPTION"
+      ]
+    },
+    {
+      "file": "backend/anomaly/__init__.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/ensemble.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/module_scores.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/anomaly_score.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/anomaly_pipeline.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/structural_engine.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/normalizer.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/grid_scan.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/anomaly/feature_extractor.py",
+      "status": "ACTIVE_ENGINE",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/structural_pipeline.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/feature_pipeline.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/orchestrator/temporal_multiscale.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/full_analysis_engine_v3.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/zone_intelligence.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/zone_validation.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/test_target_builder.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": [
+        "FIXED_SCORE_100"
+      ]
+    },
+    {
+      "file": "backend/orchestrator/target_scan_engine.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/analysis_registry.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/full_analysis_engine_v4.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/multiscale_intelligence.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/geology_pipeline.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/temporal_pipeline.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/full_analysis_engine_v2.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/full_analysis_engine.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/analysis_context.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/ai_pipeline.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/target_zone_builder.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/target_builder.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/target_zone_scan.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/test_thermal_pipeline.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/test_registry.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/test_real_full_analysis.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": [
+        "FIXED_SCORE_100"
+      ]
+    },
+    {
+      "file": "backend/orchestrator/thermal_pipeline.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/test_full_analysis.py",
+      "status": "TEST",
+      "syntax": "PASS",
+      "flags": [
+        "FIXED_SCORE_100"
+      ]
+    },
+    {
+      "file": "backend/orchestrator/multiscale_validation.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/orchestrator/scan_v2.py",
+      "status": "LEGACY_OR_RESEARCH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/api/aoi.py",
+      "status": "PRODUCTION_PATH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/api/__init__.py",
+      "status": "PRODUCTION_PATH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/api/earth_engine_auth.py",
+      "status": "PRODUCTION_PATH",
+      "syntax": "PASS",
+      "flags": [
+        "EE_CLIENT_MATERIALIZATION"
+      ]
+    },
+    {
+      "file": "backend/api/report.py",
+      "status": "PRODUCTION_PATH",
+      "syntax": "PASS",
+      "flags": []
+    },
+    {
+      "file": "backend/api/health.py",
+      "status": "PRODUCTION_PATH",
+      "syntax": "PASS",
+      "flags": [
+        "BROAD_EXCEPTION"
+      ]
+    },
+    {
+      "file": "backend/api/auth.py",
+      "status": "PRODUCTION_PATH",
+      "syntax": "PASS",
+      "flags": [
+        "BROAD_EXCEPTION"
+      ]
+    },
+    {
+      "file": "backend/api/analysis.py",
+      "status": "PRODUCTION_PATH",
+      "syntax": "PASS",
+      "flags": [
+        "BROAD_EXCEPTION"
+      ]
+    }
+  ],
+  "scientific_policy": {
+    "real_data_only": true,
+    "probability_claims": false,
+    "subsurface_depth_from_satellite": false,
+    "dynamic_world_context": true,
+    "thermal_effective_resolution_m": 30,
+    "spectral_proxy_effective_resolution_m": 20
+  }
+}

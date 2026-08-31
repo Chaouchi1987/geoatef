@@ -1,0 +1,12 @@
+{
+  "name": "GeoAnomaly Pro",
+  "version": "1.5.0",
+  "mode": "local-test-ready",
+  "scientific_core": "integrated legacy GeoAnomaly engines",
+  "frontend": "HTML/CSS/JavaScript/Leaflet",
+  "backend": "Python/FastAPI",
+  "earth_engine": "user-scoped OAuth in production; local developer credentials for local testing",
+  "synthetic_results": false,
+  "manual_coordinates": true,
+  "supported_scales_m": [10,20,30,40,50]
+}

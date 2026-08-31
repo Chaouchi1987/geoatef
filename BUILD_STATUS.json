@@ -1,0 +1,10 @@
+{
+  "version": "1.4.0",
+  "legacy_archive": "uoload.rar",
+  "legacy_python_modules_integrated": 142,
+  "production_analysis": "backend/api/analysis.py",
+  "legacy_bridge": "backend/science/legacy_bridge.py",
+  "earth_engine": "user-scoped OAuth",
+  "synthetic_results": false,
+  "experimental_v4_enabled_in_production": false
+}

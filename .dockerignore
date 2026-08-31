@@ -1,0 +1,11 @@
+.venv
+__pycache__
+*.pyc
+.git
+.gitignore
+node_modules
+data/*
+results/*
+cache/*
+*.zip
+*.rar

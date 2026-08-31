@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GeoAnomaly Pro — Chaouchi Atef Edition</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/app.css?v=final">
+</head>
+<body>
+<div id="authScreen" class="auth-screen">
+  <div class="auth-art">
+    <div class="brand-lockup"><div class="logo-mark">GA</div><div><strong>GeoAnomaly Pro</strong><small>GEOSPATIAL INTELLIGENCE</small></div></div>
+    <div class="hero-copy">
+      <span>SCIENTIFIC REMOTE SENSING PLATFORM</span>
+      <h1>منصة التحليل الجغرافي العلمي</h1>
+      <p>تحليل متعدد المصادر للبيانات الفضائية والتضاريسية لاكتشاف الشذوذات المكانية الجديرة بالتحقيق الميداني.</p>
+    </div>
+    <div class="flag-stripe"><i></i><i></i><i></i></div>
+    <div class="creator">Created by <b>Chaouchi Atef</b></div>
+  </div>
+  <div class="auth-card">
+    <div class="auth-head"><span class="eyebrow">GEOANOMALY PRO</span><h2 id="authTitle">تسجيل الدخول</h2><p id="authSubtitle">ادخل إلى مساحة التحليل الخاصة بك.</p></div>
+    <div class="tabs"><button type="button" id="loginTab" class="active">تسجيل الدخول</button><button type="button" id="signupTab">إنشاء حساب</button></div>
+    <form id="authForm">
+      <label>اسم المستخدم<input id="authUsername" required autocomplete="username"></label>
+      <label id="emailWrap" class="hidden">البريد الإلكتروني<input id="authEmail" type="email" autocomplete="email"></label>
+      <label>كلمة المرور<input id="authPassword" type="password" required minlength="10" autocomplete="current-password"></label>
+      <button class="auth-submit" type="submit">دخول</button>
+    </form>
+    <div id="authMessage" class="auth-message"></div>
+    <div class="security-note">لا يتم طلب كلمة مرور Google هنا. ربط Earth Engine يتم لاحقًا عبر Google OAuth.</div>
+    <div class="creator-small">Created by Chaouchi Atef · 2026</div>
+  </div>
+</div>
+
+<div id="app" class="app-shell hidden">
+<aside class="sidebar" id="mainSidebar">
+ <div class="brand"><div class="logo-mark small">GA</div><div><strong>GeoAnomaly Pro</strong><span>SCIENTIFIC GIS</span></div></div>
+ <nav>
+  <button type="button" class="nav-item active" data-nav="project" title="المشروع"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 3v4M16 3v4M7 11h10M7 15h6"/></svg><span>المشروع</span></button>
+  <button type="button" class="nav-item" data-nav="aoi" title="منطقة الفحص"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>منطقة الفحص</span></button>
+  <button type="button" class="nav-item" data-nav="datasets" title="مصادر البيانات"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M7 6v12M17 6v12"/></svg><span>مصادر البيانات</span></button>
+  <button type="button" class="nav-item" data-nav="analysis" title="التحليل"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/><path d="m4 19 5-6 4 3 6-9"/></svg><span>التحليل</span></button>
+  <button type="button" class="nav-item" data-nav="geology" title="الذكاء الجيولوجي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9 7l5 8 3-5 3 8H4Z"/><path d="M8 18h8"/></svg><span>الذكاء الجيولوجي</span></button>
+  <button type="button" class="nav-item" data-nav="anomalies" title="الشذوذات"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h4l2-7 4 14 2-7h4"/></svg><span>الشذوذات</span></button>
+  <button type="button" class="nav-item" data-nav="targets" title="الأهداف"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><span>الأهداف</span></button>
+  <button type="button" class="nav-item" data-nav="temporal" title="التحليل الزمني"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/><path d="M17 15v5M14.5 17.5h5"/></svg><span>التحليل الزمني</span></button>
+  <button type="button" class="nav-item" data-nav="reports" title="المخرجات والتقارير"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h6M9 17h6"/></svg><span>المخرجات والتقارير</span></button>
+ </nav>
+ <div class="sidebar-footer">
+  <div class="user-line"><b id="userName">—</b><button type="button" id="logoutBtn">خروج</button></div>
+  <div class="status-line"><i id="apiDot"></i><span id="apiStatus">الخادم</span></div>
+  <div class="status-line"><i id="eeDot"></i><span id="eeStatus">Earth Engine</span></div>
+  <div class="creator">Created by Chaouchi Atef</div>
+ </div>
+</aside>
+<main class="main">
+<header class="topbar">
+ <div><span class="eyebrow">SCIENTIFIC WORKSPACE</span><h1>GeoAnomaly Pro</h1></div>
+ <div class="top-meta"><button id="focusMapTop" class="top-btn map-focus-top" type="button">خريطة كاملة</button><button type="button" id="langBtn" class="top-btn">English</button><span id="clock"></span><span class="version-badge">FINAL · MAP FIRST</span><span class="pill">REAL DATA ONLY</span></div>
+</header>
+<div id="gaScanStatus" class="ga-scan-status" aria-live="polite"><span class="ga-state"><i id="gaScanDot"></i><b id="gaScanState">جاهز</b></span><span><b id="gaScanDuration">—</b><small>المدة</small></span><span><b id="gaScanSamples">—</b><small>العينات</small></span><span><b id="gaScanScenes">—</b><small>المشاهدات</small></span></div>
+<section class="workspace">
+<div class="control-panel">
+ <div class="panel-head sticky-head"><span>منطقة الاهتمام</span><div><b>AOI</b><button id="closeControl" class="panel-close" type="button">×</button></div></div>
+ <section class="coordinate-block">
+  <div class="section-kicker">الإحداثيات اليدوية</div>
+  <div class="coord-grid">
+   <label>خط العرض (Latitude)<input id="lat" type="number" step="0.000001" min="-90" max="90" value="35.367481"></label>
+   <label>خط الطول (Longitude)<input id="lon" type="number" step="0.000001" min="-180" max="180" value="7.755425"></label>
+  </div>
+  <div class="coord-actions"><button id="centerMapBtn" class="secondary" type="button">تحديث الخريطة</button><span>أو انقر مباشرة على الخريطة</span></div>
+ </section>
+ <label>نطاق منطقة الفحص <output id="radiusOut">50 m</output><input id="radius" type="range" min="10" max="500" step="10" value="50"></label>
+ <label>شكل منطقة الفحص<select id="geometryType"><option value="circle" selected>دائرة</option><option value="square">مربع</option></select></label>
+ <label>مقياس البيانات</label>
+ <div class="scale-grid">
+  <button type="button" data-scale="10" class="scale active">10m</button><button type="button" data-scale="20" class="scale">20m</button>
+  <button type="button" data-scale="30" class="scale">30m</button><button type="button" data-scale="40" class="scale">40m</button><button type="button" data-scale="50" class="scale">50m</button>
+ </div>
+ <div class="aoi-card"><span>الموقع</span><strong id="centre">35.367481° N / 7.755425° E</strong><span>نظام الإحداثيات</span><strong>EPSG:4326</strong><span>السياسة العلمية</span><strong class="green">بيانات حقيقية فقط</strong></div>
+ <div id="eeGate" class="ee-gate"><div><b id="eeTitle">Google Earth Engine</b><small id="eeHint">يجب ربط حسابك قبل بدء الفحص.</small></div><button type="button" id="eeConnect" class="secondary">ربط الحساب</button></div>
+ <div class="action-row"><button type="button" id="startBtn" class="primary" disabled>▶ بدء الفحص العلمي</button><button type="button" id="clearBtn" class="secondary">↺ Clear</button></div><button type="button" id="reportBtn" class="secondary" disabled>▣ المخرجات والتقرير</button>
+ <div id="message" class="message">سجّل الدخول ثم اربط Google Earth Engine.</div>
+</div>
+<div class="map-panel"><div class="map-toolbar">
+  <button type="button" id="panelToggle" class="map-tool" title="إخفاء/إظهار اللوحات" aria-label="إخفاء أو إظهار اللوحات"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <button type="button" id="fitAoiBtn" class="map-tool" title="إظهار منطقة الفحص" aria-label="إظهار منطقة الفحص"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></button>
+  <button type="button" id="openControl" class="map-tool" title="منطقة الفحص" aria-label="منطقة الفحص"><svg viewBox="0 0 24 24"><path d="M12 3l2 2.5 3.2-.2.9 3 2.5 2-1.6 2.8.8 3-2.8 1.6-1.2 2.9-3-.8-2.8 1.2-2-2.5-3.2.2-.9-3-2.5-2 1.6-2.8-.8-3 2.8-1.6L8 5.4l3 .8L12 3Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+  <button type="button" id="openResults" class="map-tool" title="الأهداف والنتائج" aria-label="الأهداف والنتائج"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h6M8 17h4"/></svg></button>
+  <span class="map-title">SATELLITE · SCIENTIFIC MAP</span>
+</div>
+<div id="map"></div>
+<div id="layerManager" class="layer-manager" aria-label="إدارة الطبقات">
+  <div class="lm-head"><strong>CONTENTS</strong><button id="layerManagerToggle" type="button" aria-label="إظهار أو إخفاء الطبقات">×</button></div>
+  <button class="layer-row" data-layer="satellite" type="button"><i class="layer-dot"></i><span>Satellite imagery</span><b>ON</b></button>
+  <button class="layer-row" data-layer="aoi" type="button"><i class="layer-dot aoi-dot"></i><span>AOI</span><b>ON</b></button>
+  <button class="layer-row" data-layer="targets" type="button"><i class="layer-dot target-dot"></i><span>Evidence targets</span><b>ON</b></button>
+</div><button id="openLayers" class="layers-fab" type="button" aria-label="إدارة الطبقات">LAYERS</button>
+<div class="map-badge">SATELLITE / GIS</div><div class="legend"><b>قوة الشذوذ</b><div class="gradient"></div><div class="legend-row"><span>منخفض</span><span>متوسط</span><span>مرتفع</span><span>قوي</span></div></div></div>
+<aside class="results-panel">
+ <div class="panel-head"><span>حالة التحليل</span><div><b id="analysisStatus">IDLE</b><button id="closeResults" class="panel-close" type="button">×</button></div></div>
+ <div class="status-card"><div class="status-icon">◌</div><div><strong id="stage">في انتظار الفحص</strong><p id="stageMsg">لا توجد عملية تحليل جارية.</p></div></div>
+ <div class="section-title">مصادر البيانات</div><div id="datasets" class="compact-results empty">لم يبدأ الفحص.</div>
+ <div class="section-title">ترتيب الأهداف</div><div id="targets" class="compact-results empty">لا تظهر أهداف إلا بناءً على أدلة حقيقية.</div>
+</aside>
+</section>
+<footer class="pipeline"><span>PIPELINE</span><b>01 Acquisition</b><b>02 Quality</b><b>03 Features</b><b>04 Anomaly</b><b>05 Consensus</b><b>06 Ranking</b><b>07 Report</b></footer>
+</main>
+</div>
+<div id="reportModal" class="report-modal hidden"><div class="report-window"><button type="button" id="closeReport" class="report-close">×</button><div id="reportContent"></div></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/i18n.js?v=working"></script>
+<script src="js/app.js?v=working"></script>
+</body></html>

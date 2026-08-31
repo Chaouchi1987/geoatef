@@ -1,0 +1,258 @@
+
+:root{--green:#006233;--green2:#0b7a43;--red:#d21034;--white:#f7faf8;--ink:#071b14;--dark:#0b1713;--panel:#10231b;--panel2:#142d22;--line:#28503d;--muted:#9ab5a6;--gold:#d7b25b}
+*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Inter,Segoe UI,system-ui,Arial;color:var(--white);background:var(--dark)}button,input{font:inherit}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px}
+.hidden{display:none!important}
+.auth-screen{min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;background:linear-gradient(120deg,#04100b,#0b2418 55%,#08120d)}
+.auth-art{position:relative;overflow:hidden;padding:48px 7vw;display:flex;flex-direction:column;justify-content:space-between;border-left:1px solid rgba(255,255,255,.06)}
+.auth-art:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;left:-170px;top:-130px;background:radial-gradient(circle,rgba(0,98,51,.5),transparent 68%);filter:blur(2px)}
+.brand-lockup,.brand{display:flex;align-items:center;gap:13px;position:relative;z-index:1}.brand-lockup strong,.brand strong{display:block;font-size:18px}.brand-lockup small,.brand span{display:block;font-size:9px;letter-spacing:2px;color:#9ab5a6;margin-top:3px}
+.logo-mark{width:52px;height:52px;border:1px solid rgba(255,255,255,.25);border-radius:16px;display:grid;place-items:center;font-weight:900;color:white;background:linear-gradient(135deg,var(--green),#082018);box-shadow:0 12px 40px rgba(0,98,51,.35)}.logo-mark.small{width:38px;height:38px;border-radius:12px;font-size:12px}
+.hero-copy{position:relative;z-index:1;max-width:680px}.hero-copy>span,.eyebrow{font-size:9px;letter-spacing:2px;color:#7bd39f}.hero-copy h1{font-size:clamp(36px,5vw,72px);line-height:1.05;margin:18px 0}.hero-copy p{color:#b5c9bd;max-width:620px;font-size:16px;line-height:1.9}
+.flag-stripe{display:flex;width:260px;height:5px;position:relative;z-index:1}.flag-stripe i{flex:1}.flag-stripe i:nth-child(1){background:var(--green)}.flag-stripe i:nth-child(2){background:#fff}.flag-stripe i:nth-child(3){background:var(--red)}
+.creator{font-size:10px;color:#8da799;position:relative;z-index:1}.creator b{color:#e8f1eb}
+.auth-card{align-self:center;width:min(460px,86%);margin:auto;background:rgba(14,35,27,.88);border:1px solid #315842;border-radius:24px;padding:34px;box-shadow:0 30px 100px rgba(0,0,0,.4);backdrop-filter:blur(18px)}
+.auth-head h2{font-size:29px;margin:8px 0}.auth-head p{color:var(--muted);font-size:12px}.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:24px 0}.tabs button,.top-btn{border:1px solid #315842;background:#0a1c14;color:#a8c0b1;border-radius:9px;padding:11px;cursor:pointer}.tabs button.active{background:var(--green);border-color:#178653;color:white}.auth-card form{display:grid;gap:13px}.auth-card label{display:grid;gap:7px;font-size:11px;color:#adc3b6}.auth-card input,.control-panel input:not([type=range]){background:#07130e;border:1px solid #31503f;color:white;border-radius:9px;padding:12px;outline:none}.auth-card input:focus,.control-panel input:focus{border-color:#51b978}.auth-submit{border:0;border-radius:10px;padding:13px;background:linear-gradient(135deg,var(--green),#0d8d4f);color:white;font-weight:800;cursor:pointer}.auth-message{min-height:22px;margin-top:10px;color:#ff9daa;font-size:11px}.security-note{margin-top:18px;border-top:1px solid #284535;padding-top:13px;color:#809a8b;font-size:9px;line-height:1.6}.creator-small{text-align:center;margin-top:18px;color:#6f887a;font-size:9px}
+
+/* ============================================================
+   GeoAnomaly Pro — MAP-FIRST WORKSPACE
+   The map is the product. Panels are tools, not the canvas.
+   ============================================================ */
+:root{
+ --ga-green:#006233;--ga-green2:#078447;--ga-red:#d21034;--ga-white:#f4faf7;
+ --ga-bg:#06110c;--ga-glass:rgba(7,24,16,.88);--ga-border:rgba(130,220,170,.20);
+ --ga-muted:#9bb8a8;--ga-gold:#e0bd61;
+}
+*{box-sizing:border-box}
+html,body,#app{width:100%;height:100%;margin:0}
+body{background:#06110c;color:var(--ga-white);overflow:hidden}
+.app-shell{
+ display:grid;
+ grid-template-columns:76px minmax(0,1fr);
+ grid-template-rows:1fr;
+ height:100vh;
+ width:100vw;
+ overflow:hidden;
+}
+.sidebar{
+ grid-column:1;grid-row:1;
+ width:76px;min-width:76px;
+ padding:16px 10px;
+ background:linear-gradient(180deg,#06150e 0%,#082219 60%,#06150e 100%);
+ border:0;border-left:1px solid rgba(130,220,170,.12);
+ z-index:3000;
+}
+.sidebar .brand{padding:4px 0 22px;text-align:center}
+.sidebar .brand .logo-mark{margin:auto;width:40px;height:40px}
+.sidebar .brand>div:last-child{display:none}
+.sidebar nav{display:flex;flex-direction:column;gap:8px}
+.nav-item{
+ width:54px;height:54px;padding:0;margin:auto;
+ justify-content:center;gap:0;
+ border:1px solid transparent;
+ background:transparent;
+ color:#8fa99b;border-radius:15px;
+ font-size:19px;
+ transition:.2s ease;
+ position:relative;
+}
+.nav-item span{display:none}
+.nav-item:hover,.nav-item.active{
+ background:linear-gradient(145deg,rgba(0,98,51,.8),rgba(7,45,29,.95));
+ border-color:rgba(130,220,170,.22);
+ color:#fff;
+ box-shadow:0 8px 24px rgba(0,0,0,.20),inset 0 0 0 1px rgba(255,255,255,.03);
+}
+.nav-item.active{box-shadow:inset 3px 0 var(--ga-red),0 8px 24px rgba(0,0,0,.2)}
+.sidebar-footer{
+ padding:12px 0 0;margin-top:auto;border-top:1px solid rgba(130,220,170,.12);
+ display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.user-line{display:block;text-align:center;font-size:0}
+.user-line b{display:block;font-size:8px;max-width:52px;overflow:hidden;text-overflow:ellipsis}
+.user-line button{font-size:8px;margin-top:4px}
+.status-line span{display:none}.status-line{gap:0}
+.sidebar-footer .creator{display:none}
+
+.main{
+ grid-column:2;grid-row:1;
+ min-width:0;min-height:0;
+ height:100vh;display:grid;
+ grid-template-rows:64px minmax(0,1fr);
+}
+.topbar{
+ height:64px;padding:0 18px;
+ border:0;border-bottom:1px solid rgba(130,220,170,.12);
+ background:rgba(3,15,10,.86);backdrop-filter:blur(18px);
+ position:relative;z-index:2000;
+}
+.topbar h1{font-size:18px;margin:2px 0}
+.top-meta{gap:8px}
+.version-badge{font-size:8px;color:#75d49a}
+.map-focus-top{display:inline-flex;align-items:center;justify-content:center}
+.top-btn{border:1px solid rgba(130,220,170,.22);background:rgba(12,38,26,.8);color:#dff2e7;border-radius:10px;padding:8px 11px;cursor:pointer}
+
+.workspace{
+ grid-row:2;
+ display:block;position:relative;
+ min-height:0;height:100%;overflow:hidden;
+}
+.map-panel{
+ position:absolute;inset:0;
+ width:100%;height:100%;
+ background:#07120d;overflow:hidden;
+}
+#map{position:absolute;inset:0;width:100%;height:100%;min-height:0;filter:saturate(.92) contrast(1.03)}
+.map-panel:after{box-shadow:inset 0 0 130px rgba(0,0,0,.34)}
+.map-badge{
+ top:14px;left:14px;
+ background:rgba(5,23,15,.82);border:1px solid rgba(130,220,170,.25);
+ border-radius:11px;padding:9px 12px;
+ backdrop-filter:blur(10px);
+}
+.map-toolbar{
+ position:absolute;z-index:1500;
+ top:14px;left:50%;right:auto;
+ transform:translateX(-50%);
+ display:flex;align-items:center;gap:7px;
+ pointer-events:none;
+}
+.map-tool{
+ pointer-events:auto;width:40px;height:40px;
+ border-radius:12px;border:1px solid rgba(130,220,170,.28);
+ background:rgba(4,21,14,.86);color:#eef9f2;
+ backdrop-filter:blur(12px);box-shadow:0 8px 30px rgba(0,0,0,.25);
+ cursor:pointer;
+}
+.map-tool:hover{transform:translateY(-1px);border-color:#65d397}
+.map-title{
+ pointer-events:none;white-space:nowrap;
+ background:rgba(4,21,14,.82);border:1px solid rgba(130,220,170,.18);
+ padding:10px 14px;border-radius:12px;
+ color:#b6d5c4;font-size:9px;letter-spacing:1.5px;
+ backdrop-filter:blur(12px);
+}
+.legend{
+ right:18px;bottom:18px;width:180px;
+ background:rgba(4,18,12,.88);border:1px solid rgba(130,220,170,.22);
+ border-radius:14px;backdrop-filter:blur(14px);
+}
+.control-panel,.results-panel{
+ position:absolute;top:14px;bottom:14px;
+ z-index:1800;width:330px;
+ background:rgba(5,24,16,.91);
+ border:1px solid rgba(130,220,170,.20);
+ border-radius:18px;
+ box-shadow:0 20px 60px rgba(0,0,0,.34);
+ backdrop-filter:blur(18px);
+ padding:16px;
+ overflow:auto;
+ transition:transform .22s ease,opacity .22s ease;
+}
+.control-panel{right:14px;left:auto;border-left:1px solid rgba(130,220,170,.20);border-right:0}
+.results-panel{left:14px;right:auto;border-right:1px solid rgba(130,220,170,.20);border-left:0}
+.panel-head{margin-bottom:12px}
+.coordinate-block,.aoi-card,.ee-gate,.status-card{
+ background:linear-gradient(145deg,rgba(15,49,32,.82),rgba(5,24,16,.78));
+ border-color:rgba(130,220,170,.18);
+}
+.action-row{grid-template-columns:1fr 82px}
+.pipeline{
+ position:absolute;left:96px;right:96px;bottom:12px;
+ z-index:1600;height:38px;
+ background:rgba(4,18,12,.78);border:1px solid rgba(130,220,170,.15);
+ border-radius:14px;padding:4px 8px;
+ backdrop-filter:blur(14px);box-shadow:0 10px 35px rgba(0,0,0,.24);
+}
+.pipeline b{padding:6px 9px;font-size:7px}
+
+.app-shell:not(.map-focus) .control-panel,
+.app-shell:not(.map-focus) .results-panel{display:block}
+.app-shell.map-focus .control-panel,
+.app-shell.map-focus .results-panel{display:none}
+.app-shell.map-focus .pipeline{display:none}
+.app-shell.map-focus .map-toolbar{top:14px}
+
+.target-popup{min-width:260px}
+.leaflet-popup-content-wrapper{border-radius:14px!important}
+.leaflet-popup-content{margin:14px!important}
+.leaflet-control-layers{
+ margin-top:58px;border-radius:12px;overflow:hidden;
+ background:rgba(5,24,16,.9);color:#eaf6ef;
+ border:1px solid rgba(130,220,170,.2);
+}
+.leaflet-control-layers-toggle{filter:invert(1) hue-rotate(90deg)!important}
+
+@media(max-width:900px){
+ .control-panel,.results-panel{width:min(330px,calc(100vw - 110px))}
+ .topbar .top-meta .version-badge,.topbar .top-meta .pill{display:none}
+}
+@media(max-width:650px){
+ .sidebar{width:60px;min-width:60px}
+ .app-shell{grid-template-columns:60px minmax(0,1fr)}
+ .nav-item{width:44px;height:44px}
+ .control-panel,.results-panel{width:calc(100vw - 82px);max-width:none}
+ .pipeline{left:72px;right:72px}
+}
+
+/* ============================================================
+   GeoAnomaly Pro FINAL UI — scientific GIS workstation
+   Inspired by professional geoscience workflows: map-first,
+   floating tools, contents/results panels, vivid status accents.
+   ============================================================ */
+.nav-item svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-item.active svg{filter:drop-shadow(0 0 7px rgba(120,230,165,.35))}
+.ga-scan-status{
+ position:absolute;z-index:2400;left:50%;bottom:58px;transform:translateX(-50%);
+ display:flex;align-items:center;gap:18px;padding:9px 15px;
+ min-height:42px;border:1px solid rgba(130,220,170,.28);border-radius:999px;
+ background:linear-gradient(135deg,rgba(5,25,16,.94),rgba(7,37,24,.88));
+ box-shadow:0 16px 50px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.05);
+ backdrop-filter:blur(18px);color:#effaf3;font-size:10px;direction:rtl;
+ transition:opacity .2s ease,transform .2s ease
+}
+.ga-scan-status>span{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.ga-scan-status small{font-size:8px;color:#8eab9b}.ga-state{padding-left:9px;border-left:1px solid rgba(130,220,170,.18)}
+#gaScanDot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#63d391;box-shadow:0 0 11px rgba(99,211,145,.65)}
+.ga-scan-status.running #gaScanDot{animation:gaPulse 1s infinite}.ga-scan-status.running #gaScanState{color:#9df0be}
+.ga-scan-status.done #gaScanDot{background:#e2bd5e;box-shadow:0 0 11px rgba(226,189,94,.55)}
+.ga-scan-status.failed #gaScanDot{background:#ff516e;box-shadow:0 0 11px rgba(255,81,110,.55)}
+@keyframes gaPulse{50%{opacity:.3;transform:scale(.75)}}
+.target-card{cursor:pointer;position:relative;overflow:hidden;width:100%;display:block;text-align:inherit;font:inherit;color:inherit;border:1px solid rgba(0,0,0,.08);background:#fff;padding:14px;border-radius:14px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.target-card:before{content:"";position:absolute;right:0;top:0;bottom:0;width:3px;background:linear-gradient(#d7b25b,#078447);opacity:.7}
+.target-card:hover{transform:translateY(-1px);border-color:rgba(120,230,165,.42);box-shadow:0 10px 26px rgba(0,0,0,.18)}
+.tp-kicker{display:block;font-size:8px;letter-spacing:1.6px;color:#648f79;margin-bottom:3px}.tp-head{display:flex;justify-content:space-between;align-items:center;gap:14px}.tp-head strong{display:block;font-size:20px}.tp-score{font-size:25px;font-weight:900}.tp-meter{height:5px;border-radius:99px;background:#dce8df;margin:10px 0 13px;overflow:hidden}.tp-meter i{display:block;height:100%;border-radius:99px}.tp-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.tp-grid>div{padding:8px;border-radius:9px;background:rgba(0,98,51,.06)}.tp-grid small,.tp-grid b{display:block}.tp-grid small{font-size:8px;color:#718579}.tp-grid b{font-size:10px;margin-top:3px}.tp-note{margin-top:10px;padding-top:9px;border-top:1px solid rgba(0,0,0,.08);font-size:9px;line-height:1.65;color:#617166}
+.app-shell.map-focus .ga-scan-status{bottom:18px}.app-shell.map-focus .ga-scan-status{transform:translateX(-50%) scale(.96)}
+@media(max-width:900px){.ga-scan-status{bottom:52px;max-width:calc(100vw - 110px);overflow:auto;gap:10px}.ga-scan-status small{display:none}}
+
+/* Scientific report viewer */
+.report-modal{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;padding:26px;background:rgba(0,0,0,.62);backdrop-filter:blur(10px)}
+.report-modal.hidden{display:none!important}
+.report-window{width:min(980px,92vw);max-height:88vh;overflow:auto;position:relative;border:1px solid rgba(130,220,170,.28);border-radius:24px;background:linear-gradient(145deg,rgba(8,29,20,.99),rgba(3,15,10,.99));box-shadow:0 30px 100px rgba(0,0,0,.55);color:#eef8f1}
+.report-close{position:absolute;top:14px;right:14px;z-index:4;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:white;font-size:22px;cursor:pointer}
+#reportContent{padding:30px}.report-hero{padding:6px 0 20px;border-bottom:1px solid rgba(130,220,170,.15)}.report-hero span{font-size:9px;letter-spacing:2px;color:#78d79e}.report-hero h2{margin:8px 0;font-size:28px}.report-hero small{color:#93ad9e}
+.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 24px}.report-grid>div{padding:13px;border:1px solid rgba(130,220,170,.14);border-radius:14px;background:rgba(255,255,255,.035)}.report-grid b,.report-grid span{display:block}.report-grid b{font-size:9px;color:#8ea99a}.report-grid span{font-size:16px;font-weight:800;margin-top:5px}
+.report-target{padding:16px;border:1px solid rgba(130,220,170,.14);border-radius:16px;background:rgba(255,255,255,.028);margin:10px 0}.rt-title{display:flex;justify-content:space-between;align-items:center}.rt-title strong{font-size:21px}.report-warning{margin-top:18px;padding:14px;border-radius:14px;background:rgba(215,178,91,.08);border:1px solid rgba(215,178,91,.18);color:#ddcfa9;font-size:11px;line-height:1.75}
+@media(max-width:760px){.report-grid{grid-template-columns:1fr 1fr}#reportContent{padding:22px}.report-window{width:96vw}}
+
+/* FINAL UI interaction guard: explicit hidden state must win over layout defaults. */
+.control-panel.panel-hidden,.results-panel.panel-hidden{display:none;opacity:0;pointer-events:none;transform:translateY(8px) scale(.99)}
+.app-shell.map-focus .control-panel,.app-shell.map-focus .results-panel{display:none}
+@media(max-width:1050px){.control-panel,.results-panel{width:300px}.topbar .top-meta .pill{display:none}}
+
+.map-tool svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.map-tool{display:inline-flex;align-items:center;justify-content:center}
+.map-tool:focus-visible,.top-btn:focus-visible,.nav-item:focus-visible,.primary:focus-visible,.secondary:focus-visible{outline:2px solid #63d391;outline-offset:2px}
+
+/* Verified GIS Contents manager */
+.layer-manager{position:absolute;top:68px;right:18px;z-index:1500;width:238px;padding:10px;border:1px solid rgba(130,220,170,.2);border-radius:16px;background:rgba(4,18,12,.88);backdrop-filter:blur(18px);box-shadow:0 18px 45px rgba(0,0,0,.28);color:#eef8f1}
+.layer-manager.hidden{display:none}
+.lm-head{display:flex;align-items:center;justify-content:space-between;padding:4px 5px 9px;border-bottom:1px solid rgba(255,255,255,.08);font-size:10px;letter-spacing:1.5px}
+.lm-head button{border:0;background:transparent;color:#9eb5a7;font-size:18px;cursor:pointer}
+.layer-row{width:100%;display:grid;grid-template-columns:12px 1fr auto;gap:9px;align-items:center;margin-top:6px;padding:9px 8px;border:1px solid transparent;border-radius:10px;background:transparent;color:#dce9e1;text-align:left;cursor:pointer}
+.layer-row:hover,.layer-row.active{background:rgba(255,255,255,.055);border-color:rgba(130,220,170,.12)}
+.layer-row b{font-size:8px;letter-spacing:1px;color:#69d69a}.layer-row:not(.active) b{color:#819187}
+.layer-dot{width:9px;height:9px;border-radius:50%;display:block;background:#80c7ff;box-shadow:0 0 10px rgba(128,199,255,.55)}
+.layer-dot.aoi-dot{background:#58e39a}.layer-dot.target-dot{background:#ff6d82;box-shadow:0 0 10px rgba(255,109,130,.55)}
+.layers-fab{position:absolute;right:18px;bottom:82px;z-index:1400;border:1px solid rgba(130,220,170,.2);border-radius:10px;background:rgba(4,18,12,.82);color:#dce9e1;padding:8px 10px;font-size:8px;letter-spacing:1px;cursor:pointer;backdrop-filter:blur(12px)}
+@media(max-width:650px){.layer-manager{right:10px;top:62px;width:210px}.layers-fab{right:10px;bottom:72px}}

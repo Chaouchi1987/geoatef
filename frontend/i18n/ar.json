@@ -1,0 +1,20 @@
+{
+  "app": "GeoAnomaly Pro",
+  "tagline": "الذكاء الجغرافي والتحليل العلمي للشذوذات المكانية",
+  "signIn": "تسجيل الدخول",
+  "register": "إنشاء حساب",
+  "username": "اسم المستخدم",
+  "password": "كلمة المرور",
+  "email": "البريد الإلكتروني",
+  "connectEE": "ربط Google Earth Engine",
+  "start": "بدء الفحص العلمي",
+  "aoi": "منطقة الدراسة",
+  "analysis": "التحليل",
+  "datasets": "مصادر البيانات",
+  "targets": "الأهداف",
+  "report": "التقرير العلمي",
+  "language": "اللغة",
+  "realData": "بيانات حقيقية فقط",
+  "noTargets": "لم يتم تحديد أهداف مدعومة علميًا.",
+  "fieldVerification": "يلزم التحقق الميداني."
+}

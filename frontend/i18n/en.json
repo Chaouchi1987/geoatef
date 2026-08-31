@@ -1,0 +1,20 @@
+{
+  "app": "GeoAnomaly Pro",
+  "tagline": "Geospatial Intelligence & Scientific Anomaly Analysis",
+  "signIn": "Sign in",
+  "register": "Create account",
+  "username": "Username",
+  "password": "Password",
+  "email": "Email",
+  "connectEE": "Connect Google Earth Engine",
+  "start": "Start Scientific Analysis",
+  "aoi": "Area of Interest",
+  "analysis": "Analysis",
+  "datasets": "Datasets",
+  "targets": "Targets",
+  "report": "Scientific Report",
+  "language": "Language",
+  "realData": "REAL DATA ONLY",
+  "noTargets": "No scientifically supported target zones identified.",
+  "fieldVerification": "Field verification required."
+}
